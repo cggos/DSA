@@ -16,6 +16,8 @@ add_library(cgads SHARED ${SRC_LISTS})
 
 add_executable(sparse_matrix src/sparse_matrix.cc)
 
+add_subdirectory(test)
+
 
 ################ google test ################
 enable_testing()
