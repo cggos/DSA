@@ -4,6 +4,26 @@ ChenGuang Algorithm and Data Structure library :sunny:
 
 ---
 
+# Keys
+
+## 线性表
+
+## 链表
+
+## 二叉树
+
+* 遍历
+  - 前序遍历
+  - 中序遍历
+  - 后序遍历
+  - 层序遍历
+
+* 二叉树的序列化和反序列化
+
+* 二叉树两结点的最近共同祖先结点（leetcode 236）
+
+## 排列组合算法
+
 # Tutorial
 
 ## Books
