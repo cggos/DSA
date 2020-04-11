@@ -10,6 +10,8 @@
  */
 #include <iostream>
 #include <stdlib.h>
+#include <string.h>
+#include <cmath>
 
 using namespace std;
 
@@ -36,12 +38,38 @@ struct node
 */
 void create_linklist(node **pHead, int n)
 {
+    if(pHead == nullptr)
+        return;
+        
+    *pHead = new node;
+    (*pHead)->n = nullptr;
+    node *pend = *pHead;
+    for(int i=0; i<n; ++i) {
+        node *pnew = new node;
+        pnew->v = i+1;
+        pnew->n = nullptr;
+
+        pend->n = pnew;
+
+        pend = pnew;        
+    }
 }
 
 
 //对参数传入的链表进行逆转
 void reverse_linklist(node **pHead)
 {	
+    node *pnew = nullptr;
+    node *q = nullptr;
+    node *p = (*pHead)->n;
+    while(p != nullptr) {
+        q = p;
+        p = p->n;
+
+        q->n = pnew;
+        pnew = q;
+    }
+    (*pHead)->n = pnew;
 }
 
 //在指定链表位置Index插入指定Value
@@ -49,21 +77,73 @@ void reverse_linklist(node **pHead)
 // Index = 0 即为头添加
 void insert_node(node **pHead,  int Index, int Value)
 {	
+    if(Index == 0) {
+        node *pnew = new node;
+        pnew->v = Value;
+        pnew->n = (*pHead)->n;
+        (*pHead)->n = pnew;
+    } else {
+        node *p = (*pHead)->n;
+        int i = 1;
+        while(p != nullptr && i < Index) {
+            p = p->n;
+            ++i;
+        }
+        if(p != nullptr) {
+            node *pnew = new node;
+            pnew->v = Value;
+            pnew->n = p->n;
+            p->n = pnew;
+        }
+    }
 }
 
 //删除链表位置Index所在的节点
 void delete_node(node **pHead,  int Index)
 {	
+    if(Index == 0) {
+        std::cerr << "[cggos " << __FUNCTION__ << "] Index = 0" << std::endl;
+        return;
+    } else {
+        node *p = (*pHead)->n;
+        int i = 1;
+        while(p != nullptr && i < Index-1) {
+            p = p->n;
+            ++i;
+        }
+        if(p != nullptr && p->n != nullptr) {
+            node *q = p->n;
+            p->n = q->n;
+            delete q;
+            q = nullptr;
+        } else {
+            std::cerr << "[cggos " << __FUNCTION__ << "] Index too large!" << std::endl;
+        }
+    }
 }
 
 //删除整个链表
 void delete_linklist(node **pHead)
 {
+    node *p = (*pHead)->n;
+    node *q;
+    while (p != nullptr) {
+        q = p->n;
+        delete p;
+        p = q;
+    }
+    (*pHead)->n = nullptr;
 }
 
 //打印整个列表
 void print_linklist(node **pHead)
 {
+    node *p = (*pHead)->n;
+    while(p != nullptr) {
+        std::cout << p->v << " ";
+        p = p->n;
+    }
+    std::cout << std::endl;
 }
 
 /**************************************************************************************************
@@ -80,6 +160,12 @@ void print_linklist(node **pHead)
 
 int CountRat(int t, int n)
 {
+    if (n > 3 * t || n < t)
+        return 0;
+    else if (t == 1)
+        return 1;
+    else
+        return CountRat(t - 1, n - 1) + CountRat(t - 1, n - 2) + CountRat(t - 1, n - 3);
 }
 
 /**************************************************************************************************
@@ -97,6 +183,7 @@ int CountRat(int t, int n)
 
 double rectangle(double (*data)[2], int N)
 {
+    // TODO
 }
 
 /**************************************************************************************************
@@ -125,8 +212,106 @@ double rectangle(double (*data)[2], int N)
         bool: 返回是否成功找到最近共同祖先，true为找到，false为没找到。
     注意：LCA是 lowest common ancestor的缩写。所有节点信息以及需要寻找最近共同祖先的两个节点信息均在main函数中给定。
 */
+typedef struct BinTreeNode {
+    char data[3];
+    BinTreeNode *lchild, *rchild;
+}*PBTree, BTree;
+/**
+ * @brief 层序数组构建二叉树
+ * 
+ * @param arr 
+ * @param len 
+ * @param i 
+ * @return BTree* 
+ */
+PBTree create_btree(char (*arr)[3], int len, int i) {
+	if (!arr || len < 1) return nullptr;
+	BTree *root = nullptr;
+    char init[3] = {'f'};
+    char tmp[3];
+    tmp[0] = arr[i][0];
+    tmp[1] = arr[i][1];
+    tmp[2] = arr[i][2];
+	if (i < len && strcmp(tmp, init) != 0) {
+		root = new BTree();
+		if (root == nullptr) return nullptr;
+		root->data[0] = arr[i][0];
+        root->data[1] = arr[i][1];
+        root->data[2] = arr[i][2];
+		root->lchild = create_btree(arr, len, 2 * i + 1);
+		root->rchild = create_btree(arr, len, 2 * i + 2);
+	}
+	return root;
+}
+/**
+ * @brief 前序遍历二叉树
+ * 
+ * @param pbtree 
+ */
+void preorder_traverse(PBTree pbtree) {
+    if(pbtree != nullptr) {
+        std::cout << pbtree->data << " ";
+        preorder_traverse(pbtree->lchild);
+        preorder_traverse(pbtree->rchild);
+    } else {
+        std::cout << "";
+    }
+}
+PBTree lowest_common_ancestor(PBTree root, char p[3], char q[3]) {
+    if(root == nullptr) return nullptr;
+    
+    if(strcmp(root->data, p) == 0 || strcmp(root->data, q) == 0) return root;
+        
+    PBTree left =  lowest_common_ancestor(root->lchild, p, q);
+    PBTree right = lowest_common_ancestor(root->rchild, p, q);
+    
+    if(left == nullptr)  return right;
+    if(right == nullptr) return left;      
+    if(left && right)    return root;
+    
+    return nullptr;
+}
 bool LCA(char (*tree)[3], int node_size, char a[3], char b[3], char lca[3])
 {
+    int lmax = 0;
+    for(int i=0; i<node_size; i++) {
+        int l = tree[i][0] - 48;
+        if(l > lmax) lmax = l;
+    }
+
+    int n_size = std::pow(2, lmax+1) - 1;
+
+    char tree_full[n_size][3];
+    for(int i=0; i<n_size; i++) {
+        tree_full[i][0] = 'f';
+        tree_full[i][1] = 'f';
+        tree_full[i][2] = 'f';
+    }
+
+    for(int i=0; i<node_size; i++) {
+        int l = tree[i][0] - 48;
+        int m = tree[i][1] - 48;
+        int idx = std::pow(2, l) - 1 + m;
+        tree_full[idx][0] = tree[i][0];
+        tree_full[idx][1] = tree[i][1];
+        tree_full[idx][2] = tree[i][2];
+    }
+
+    PBTree pbtree = create_btree(tree_full, n_size, 0);
+
+    // test
+    // preorder_traverse(pbtree); std::cout << std::endl;
+
+    PBTree ptree_node_ca = lowest_common_ancestor(pbtree, a, b);
+
+    if(ptree_node_ca != nullptr) {
+        lca[0] = ptree_node_ca->data[0];
+        lca[1] = ptree_node_ca->data[1];
+        lca[2] = ptree_node_ca->data[2];
+        return true;
+    } else {
+        return false;
+    }
 }
 
 int main()
