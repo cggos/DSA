@@ -62,5 +62,9 @@ int main() {
     std::cout << sizeof(char *) << std::endl;
     std::cout << sizeof(int) << std::endl;
 
+    int arr[6] = {0, 1, 2, 3, 4, 5};
+    int *ptr = (int*)(&arr+1);
+    std::cout << *(ptr-1) << ", " << (arr+1)[2] << std::endl; // 5, 3
+
     return 0;
 }
