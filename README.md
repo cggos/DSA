@@ -1,6 +1,4 @@
-# CGADS
-
-ChenGuang Algorithm and Data Structure library :sunny:
+# Data Structures and Algorithms :sunny:
 
 ---
 
@@ -32,7 +30,7 @@ ChenGuang Algorithm and Data Structure library :sunny:
 * [Algorithms](https://algs4.cs.princeton.edu/home/)
 * [Open Data Structures](http://opendatastructures.org/)
 * [Algorithms and data structures in C/C++](https://www.cprogramming.com/algorithms-and-data-structures.html)
-  - [cggos/data_structures_and_algorithms_in_cpp](https://github.com/cggos/data_structures_and_algorithms_in_cpp)
+  - [cggos/ds_alg_cpp](https://github.com/cggos/ds_alg_cpp)
 
 ## Visual
 * [VisuAlgo](https://visualgo.net)
