@@ -2,6 +2,7 @@
 add_executable(test01 test01.cpp)
 add_executable(test02 test02.cpp)
 add_executable(test03 test03.cpp)
+add_executable(test04 test04.cpp)
 
 add_executable(test_yh test_yh.cpp)
 
