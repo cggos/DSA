@@ -5,10 +5,10 @@
 extern "C" {
 #endif
 
-typedef struct node{
-    int data;
-    struct node *lchild, *rchild;
-}*BTREE;
+typedef struct node {
+  int data;
+  struct node *lchild, *rchild;
+} * BTREE;
 
 void Ancestor(BTREE tree, int item);
 
@@ -22,4 +22,4 @@ void Posorder(BTREE &T);
 }
 #endif
 
-#endif // CGADS_TREE_BINARY__H_
+#endif  // CGADS_TREE_BINARY__H_
