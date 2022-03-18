@@ -1,13 +1,6 @@
 #include <bitset>
 #include <iostream>
 
-#pragma pack(4)  //设定为n字节对齐
-class test {
-  int a;   // 内存位置：[0]..[3]
-  char b;  // 内存位置：[4]
-  int *c;  // 内存位置：[8]..[15]
-};
-
 class Base {
  public:
   int a;
@@ -43,8 +36,6 @@ int main() {
     bb.print();
     std::cout << sizeof(aa) << ", " << sizeof(bb) << std::endl;
   }
-
-  std::cout << sizeof(test) << std::endl;
 
   double dval = 3.0;
   const int &ival = dval;

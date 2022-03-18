@@ -11,3 +11,5 @@ add_executable(binary_tree_01 ../src/binary_tree_01.cc)
 
 add_executable(permutation_combination permutation_combination.cpp)
 add_executable(smallest_bounding_rectangle smallest_bounding_rectangle.cpp)
+
+add_executable(mem_align mem_align.cpp)
