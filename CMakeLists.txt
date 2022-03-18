@@ -10,6 +10,7 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 set(SRC_LISTS 
     src/algorithm.cc 
     src/linear_list_single.cc 
+    src/linked_list_double.cc
     src/tree_binary.cc)
 
 add_library(cgads SHARED ${SRC_LISTS})
@@ -21,9 +22,9 @@ add_subdirectory(test)
 
 ################ google test ################
 enable_testing()
-find_package(GTest REQUIRED)
+find_package(GTest)
 if(GTest_FOUND)
     include_directories(${GTEST_INCLUDE_DIRS})
+    add_subdirectory(unit_test)
+    add_test(NAME ./unit_test/unit_test.run COMMAND ./unit_test/unit_test.run)    
 endif()
-add_subdirectory(unit_test)
-add_test(NAME ./unit_test/unit_test.run COMMAND ./unit_test/unit_test.run)
