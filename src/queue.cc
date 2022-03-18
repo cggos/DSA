@@ -1,16 +1,4 @@
-#include <iostream>
-#include <stack>
-
-template <typename T>
-class CQueue {
- public:
-  void appendTail(const T &node);
-  void deleteHead();
-
- private:
-  std::stack<T> stack1;
-  std::stack<T> stack2;
-};
+#include "ads/queue.h"
 
 template <typename T>
 void CQueue<T>::appendTail(const T &element) {
@@ -34,5 +22,3 @@ void CQueue<T>::deleteHead() {
   if (stack2.empty()) std::cerr << "Queue is EMPTY!" << std::endl;
   stack2.pop();
 }
-
-int main() { return 0; }

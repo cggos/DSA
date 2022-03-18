@@ -1,7 +1,7 @@
 #ifndef CGADS_SINGLE_LIST_H_
 #define CGADS_SINGLE_LIST_H_
 
-#include "cgads/linear_list_single.h"
+#include "ads/linear_list_single.h"
 
 #include <stdio.h>
 #include <stdlib.h>

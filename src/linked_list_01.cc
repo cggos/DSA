@@ -1,10 +1,7 @@
 #include <iostream>
 #include <stack>
 
-struct ListNode {
-  int m_nValue;
-  ListNode *m_pNext;
-};
+#include "ads/linked_list_01.h"
 
 void AddToTail(ListNode **ppHead, int value) {
   if (ppHead == NULL) return;

@@ -1,4 +1,4 @@
-#include "cgads/algorithm.h"
+#include "ads/algorithm.h"
 
 #include <stdio.h>
 

@@ -1,33 +1,6 @@
-/**
- * @file binary_tree_02.cpp
- * @author cggos (cggos@outlook.com)
- * @brief 二叉树的层序创建&&层序遍历
- *        输入序列为：1，2，3，4，5，6，7，8，0，0，0，0，9，0，0，0，0，0，0
- *        输出序列为：1，2，3，4，5，6，7，8，9
- * @version 0.1
- * @date 2020-04-08
- *
- * @copyright Copyright (c) 2020
- *
- */
 #include <iostream>
 
-typedef struct TreeNode {
-  int Data;
-  TreeNode *Left, *Right;
-} * BinTree;
-
-struct qNode {
-  BinTree Tree;
-  struct qNode *Next;
-};
-typedef struct qNode *QNode;
-
-struct queue {
-  QNode front;
-  QNode rear;
-};
-typedef struct queue *LinkQueue;
+#include "ads/binary_tree_01.h"
 
 LinkQueue CreateQueue() {
   LinkQueue Q;
@@ -35,6 +8,7 @@ LinkQueue CreateQueue() {
   Q->front = Q->rear = NULL;
   return Q;
 }
+
 void AddQ(LinkQueue Q, BinTree tree) {
   QNode q;
   q = (QNode)malloc(sizeof(struct qNode));
@@ -48,6 +22,7 @@ void AddQ(LinkQueue Q, BinTree tree) {
     Q->rear = q;
   }
 }
+
 BinTree DeleteQ(LinkQueue Q) {
   QNode temp;
   BinTree tree;
@@ -64,6 +39,7 @@ BinTree DeleteQ(LinkQueue Q) {
   }
   return tree;
 }
+
 int IsEmpty(LinkQueue Q) {
   if (Q->front == NULL)
     return 1;

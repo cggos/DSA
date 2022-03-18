@@ -9,7 +9,7 @@
  *
  */
 
-#include "cgads/linked_list_double.h"
+#include "ads/linked_list_double.h"
 
 #include <assert.h>
 

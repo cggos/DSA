@@ -11,6 +11,7 @@ set(SRC_LISTS
     src/algorithm.cc 
     src/linear_list_single.cc 
     src/linked_list_double.cc
+    src/queue.cc
     src/tree_binary.cc)
 
 add_library(cgads SHARED ${SRC_LISTS})
