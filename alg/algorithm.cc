@@ -79,7 +79,6 @@ void test_precision() {
 }
 
 int main() {
-  test7();
   test_abc();
   test_bit();
   test_map();
