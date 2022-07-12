@@ -1,4 +1,4 @@
-#include "tree/tree_binary.h"
+#include "tree/binary_tree.h"
 
 #include <stdio.h>
 
@@ -40,31 +40,30 @@ void Ancestor(BTREE tree, int item) {
 
 //===============================================先序递归遍历二叉树
 void PreOrderTraverse(BTREE &T) {
-  //先序递归遍历二叉树
-  if (T) {  //当结点不为空的时候执行
+  if (T) {
     std::cout << T->data;
     PreOrderTraverse(T->lchild);  //
     PreOrderTraverse(T->rchild);
   } else
     std::cout << "";
-}  // PreOrderTraverse
+}
 
 //================================================中序遍历二叉树
-void Inorder(BTREE &T) {   //中序递归遍历二叉树
-  if (T) {                 // bt=null退层
-    Inorder(T->lchild);    //中序遍历左子树
-    std::cout << T->data;  //访问参数
-    Inorder(T->rchild);    //中序遍历右子树
+void Inorder(BTREE &T) {
+  if (T) {
+    Inorder(T->lchild);
+    std::cout << T->data;
+    Inorder(T->rchild);
   } else
     std::cout << "";
-}  // Inorder
+}
 
 //=================================================后序递归遍历二叉树
 void Posorder(BTREE &T) {
   if (T) {
-    Posorder(T->lchild);   //后序递归遍历左子树
-    Posorder(T->rchild);   //后序递归遍历右子树
-    std::cout << T->data;  //访问根结点
+    Posorder(T->lchild);
+    Posorder(T->rchild);
+    std::cout << T->data;
   } else
     std::cout << "";
 }

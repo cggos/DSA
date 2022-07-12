@@ -65,30 +65,28 @@ class Vector {
   int *_p;
 };
 
-/*
-3. 说说下面代码的问题以及如何改正(已改)
-*/
-
 class Base {
  public:
-  Base() {}
-  Base(int size) { _p1 = new int[size]; }
-  ~Base() { delete _p1; }
-
- public:
-  int *_p1;
+  int a;
+  Base() {
+    a = 0;
+    std::cout << "base constructor..." << std::endl;
+  }
+  void print() { std::cout << a << std::endl; }
+  virtual void fun() {}
+  ~Base() { std::cout << "base destructor..." << std::endl; }
 };
 
-class Derive : public Base {
+class Derived : public Base {
  public:
-  Derive(int size) {
-    _p2 = new int[size];
-    if (_p1) *_p1 = 10;
+  int a;
+  Derived() {
+    a = 1;
+    std::cout << "derived constructor..." << std::endl;
   }
-  ~Derive() { delete _p2; }
-
- private:
-  int *_p2;
+  virtual void fun() {}
+  virtual void fun01() {}
+  ~Derived() { std::cout << "derived destructor..." << std::endl; }
 };
 
 int main() {
@@ -105,8 +103,10 @@ int main() {
   Vector vb(va);
   Vector vc = std::move(va);
 
-  Base *p = new Derive(10);
-  delete p;
+  Base aa;
+  Derived bb;
+  bb.print();
+  std::cout << sizeof(aa) << ", " << sizeof(bb) << std::endl;
 
   return 0;
 }
