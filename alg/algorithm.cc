@@ -1,4 +1,4 @@
-#include "ads/algorithm.h"
+#include "alg/algorithm.h"
 
 #include <stdio.h>
 

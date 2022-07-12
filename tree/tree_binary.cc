@@ -1,4 +1,4 @@
-#include "ads/tree_binary.h"
+#include "tree/tree_binary.h"
 
 #include <stdio.h>
 

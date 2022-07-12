@@ -2,9 +2,9 @@
 
 #include <iostream>
 
-#include "cgads/algorithm.h"
-#include "cgads/linear_list.h"
-#include "cgads/linear_list_single.h"
+#include "alg/algorithm.h"
+#include "linked_list/linear_list.hpp"
+#include "linked_list/linear_list_single.h"
 
 TEST(Algorithm, basis) {
   std::cout << world_length() << std::endl;

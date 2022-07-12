@@ -1,6 +1,6 @@
-#include <iostream>
+#include "tree/binary_tree_01.h"
 
-#include "ads/binary_tree_01.h"
+#include <iostream>
 
 LinkQueue CreateQueue() {
   LinkQueue Q;
@@ -98,11 +98,4 @@ void LevelOrderTraversal(BinTree BT) {
     if (T->Left) AddQ(q, T->Left);
     if (T->Right) AddQ(q, T->Right);
   }
-}
-
-int main(int argc, char *argv[]) {
-  BinTree BT;
-  BT = CreateBinTree();
-  LevelOrderTraversal(BT);
-  return 0;
 }

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stack>
 
-#include "ads/linked_list_01.h"
+#include "linked_list/linked_list_01.h"
 
 void AddToTail(ListNode **ppHead, int value) {
   if (ppHead == NULL) return;
@@ -49,23 +49,3 @@ void PrintReversingly_Recursively(ListNode *pHead) {
   std::cout << pHead->m_nValue << ", ";
 }
 
-int main() {
-  ListNode *pHead = NULL;
-  ListNode **ppHead = &pHead;
-
-  for (int i = 1; i < 5; ++i) AddToTail(ppHead, i);
-
-  ListNode *pNode = *ppHead;
-  while (pNode != NULL) {
-    std::cout << pNode->m_nValue << ", ";
-    pNode = pNode->m_pNext;
-  }
-  std::cout << std::endl;
-
-  PrintReversingly_Iteratively(*ppHead);
-
-  PrintReversingly_Recursively(*ppHead);
-  std::cout << std::endl;
-
-  return 0;
-}

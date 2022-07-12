@@ -1,31 +1,35 @@
-cmake_minimum_required(VERSION 2.8)
-project(cgads)
+cmake_minimum_required(VERSION 3.0)
+project(DSA)
 
 set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -std=c++11 -Wall")
 
-include_directories(${PROJECT_SOURCE_DIR}/include)
+include_directories(${PROJECT_SOURCE_DIR})
 
-# aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC_LISTS)
+aux_source_directory(${PROJECT_SOURCE_DIR}/linked_list SRC_LL)
+aux_source_directory(${PROJECT_SOURCE_DIR}/tree SRC_TREE)
 
-set(SRC_LISTS 
-    src/algorithm.cc 
-    src/linear_list_single.cc 
-    src/linked_list_double.cc
-    src/queue.cc
-    src/tree_binary.cc)
+add_executable(linked_list ${SRC_LL})
+add_executable(binary_tree ${SRC_TREE})
+add_executable(sparse_matrix mix/sparse_matrix.cc)
 
-add_library(cgads SHARED ${SRC_LISTS})
+# alg
+add_executable(permutation_combination alg/permutation_combination.cpp)
+add_executable(smallest_bounding_rectangle alg/smallest_bounding_rectangle.cpp)
+add_executable(mem_align alg/mem_align.cpp)
 
-add_executable(sparse_matrix src/sparse_matrix.cc)
+add_executable(test01 alg/test01.cpp)
+add_executable(test02 alg/test02.cpp)
+add_executable(test03 alg/test03.cpp)
+add_executable(test04 alg/test04.cpp)
 
-add_subdirectory(test)
+add_executable(test_yh alg/test_yh.cpp)
 
-
-################ google test ################
+# ############### google test ################
 enable_testing()
 find_package(GTest)
+
 if(GTest_FOUND)
     include_directories(${GTEST_INCLUDE_DIRS})
     add_subdirectory(unit_test)
-    add_test(NAME ./unit_test/unit_test.run COMMAND ./unit_test/unit_test.run)    
+    add_test(NAME ./unit_test/unit_test.run COMMAND ./unit_test/unit_test.run)
 endif()
