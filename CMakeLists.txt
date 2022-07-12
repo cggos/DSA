@@ -13,14 +13,13 @@ add_executable(binary_tree ${SRC_TREE})
 add_executable(sparse_matrix mix/sparse_matrix.cc)
 
 # alg
+add_executable(algorithm alg/algorithm.cc)
 add_executable(mem_align alg/mem_align.cpp)
 add_executable(array_string alg/array_string.cpp)
 add_executable(class00 alg/class00.cpp)
 add_executable(permutation_combination alg/permutation_combination.cpp)
 add_executable(smallest_bounding_rectangle alg/smallest_bounding_rectangle.cpp)
-
 add_executable(testyh alg/testyh.cpp)
-add_executable(test00 alg/test00.cpp)
 
 # ############### google test ################
 enable_testing()
