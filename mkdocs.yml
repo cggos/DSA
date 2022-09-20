@@ -102,3 +102,7 @@ nav:
     - Overview: alg/README.md
     - Sort: alg/sort.md
     - Dynamic Programming: alg/dp.md
+  
+  - C++:
+    - Overview: cpp/README.md
+    - Libs: cpp/lib.md
