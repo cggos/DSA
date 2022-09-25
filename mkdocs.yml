@@ -100,6 +100,8 @@ nav:
 
   - Algorithms:
     - Overview: alg/README.md
+    - Traversal: alg/traversal.md
+    - Search: alg/search.md
     - Sort: alg/sort.md
     - Dynamic Programming: alg/dp.md
   
