@@ -12,14 +12,14 @@
         <meta name="author" content="Gavin Gao">
       
       
-        <link rel="canonical" href="https://dsa.cgabc.xyz/alg/sort/">
+        <link rel="canonical" href="https://dsa.cgabc.xyz/alg/search/">
       
       <link rel="icon" href="../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
-        <title>Sort - DSA</title>
+        <title>Search - DSA</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#Sort" class="md-skip">
+        <a href="#Search" class="md-skip">
           跳转至
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sort
+              Search
             
           </span>
         </div>
@@ -463,20 +463,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../search/" class="md-nav__link">
-        Search
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -489,12 +475,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Sort
+          Search
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Sort
+        Search
       </a>
       
         
@@ -513,8 +499,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#Overview" class="md-nav__link">
-    Overview
+  <a href="#Binary_Search" class="md-nav__link">
+    Binary Search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#LeetCode" class="md-nav__link">
+    LeetCode
   </a>
   
 </li>
@@ -523,6 +516,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sort/" class="md-nav__link">
+        Sort
+      </a>
     </li>
   
 
@@ -639,8 +646,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#Overview" class="md-nav__link">
-    Overview
+  <a href="#Binary_Search" class="md-nav__link">
+    Binary Search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#LeetCode" class="md-nav__link">
+    LeetCode
   </a>
   
 </li>
@@ -657,7 +671,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/cggos/DSA/edit/master/docs/alg/sort.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/cggos/DSA/edit/master/docs/alg/search.md" title="编辑此页" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
@@ -666,12 +680,19 @@
 
 
 
-<h1 id="Sort">Sort<a class="headerlink" href="#Sort" title="Permanent link">&para;</a></h1>
+<h1 id="Search">Search<a class="headerlink" href="#Search" title="Permanent link">&para;</a></h1>
 <hr />
-<h2 id="Overview">Overview<a class="headerlink" href="#Overview" title="Permanent link">&para;</a></h2>
+<h2 id="Binary_Search">Binary Search<a class="headerlink" href="#Binary_Search" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://leetcode.cn/circle/discuss/eBo9UB/">十大排序从入门到入赘 (LeetCode)</a></li>
+<li>二分查找也称折半查找（Binary Search），它是一种效率较高的查找方法，可以在数据规模的对数时间复杂度内完成查找。</li>
+<li>二分查找可以应用于数组，是因为数组具有有随机访问的特点，并且数组是有序的。</li>
+<li>二分查找体现的数学思想是「减而治之」，可以通过当前看到的中间元素的特点推测它两侧元素的性质，以达到缩减问题规模的效果。</li>
 </ul>
+<h2 id="LeetCode">LeetCode<a class="headerlink" href="#LeetCode" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Binary Search Code: <a href="https://leetcode.cn/tag/binary-search/">https://leetcode.cn/tag/binary-search/</a></li>
+</ul>
+<p>leetcode 69: x 的平方根</p>
 
               
             </article>
@@ -692,7 +713,7 @@
     <nav class="md-footer__inner md-grid" aria-label="页脚" >
       
         
-        <a href="../search/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Search" rel="prev">
+        <a href="../traversal/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Traversal" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -701,20 +722,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              Search
+              Traversal
             </div>
           </div>
         </a>
       
       
         
-        <a href="../dp/" class="md-footer__link md-footer__link--next" aria-label="下一页: Dynamic Programming" rel="next">
+        <a href="../sort/" class="md-footer__link md-footer__link--next" aria-label="下一页: Sort" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              Dynamic Programming
+              Sort
             </div>
           </div>
           <div class="md-footer__button md-icon">
