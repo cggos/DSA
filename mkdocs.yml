@@ -95,9 +95,6 @@ nav:
   - Tree:
     - Overview: tree/README.md
 
-  - Graph:
-    - Overview: graph/README.md
-
   - Algorithms:
     - Overview: alg/README.md
     - Traversal: alg/traversal.md
