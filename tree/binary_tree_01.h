@@ -1,3 +1,7 @@
+// Copyright 2024 Gavin Gao. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
 /**
  * @file binary_tree_02.cpp
  * @author Gavin Gao (cggos@outlook.com)
@@ -11,8 +15,8 @@
  *
  */
 
-#ifndef CGADS_BINARY_TREE_01__H_
-#define CGADS_BINARY_TREE_01__H_
+#ifndef DSA_BINARY_TREE_01__H_
+#define DSA_BINARY_TREE_01__H_
 
 typedef struct TreeNode {
   int Data;
@@ -43,4 +47,4 @@ BinTree CreateBinTree();
 
 void LevelOrderTraversal(BinTree BT);
 
-#endif  // CGADS_BINARY_TREE_01__H_
+#endif  // DSA_BINARY_TREE_01__H_

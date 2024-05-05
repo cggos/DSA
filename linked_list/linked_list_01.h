@@ -1,3 +1,7 @@
+// Copyright 2024 Gavin Gao. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
 /**
  * @file linked_list_01.h
  * @author Gavin Gao (cggos@outlook.com)
@@ -9,8 +13,8 @@
  * 
  */
 
-#ifndef CGADS_LINKED_LIST_01_H_
-#define CGADS_LINKED_LIST_01_H_
+#ifndef DSA_LINKED_LIST_01_H_
+#define DSA_LINKED_LIST_01_H_
 
 struct ListNode {
   int m_nValue;
@@ -25,4 +29,4 @@ void PrintReversingly_Recursively(ListNode *pHead);
 
 
 
-#endif // CGADS_LINKED_LIST_01_H_
+#endif // DSA_LINKED_LIST_01_H_

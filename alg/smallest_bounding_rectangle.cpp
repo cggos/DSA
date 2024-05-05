@@ -1,3 +1,7 @@
+// Copyright 2024 Gavin Gao. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
 /*====================================*\
 |*          最小矩形面积覆盖          *|
 |* 多边形A必须是凸包(默认：逆时针顺序)   *|

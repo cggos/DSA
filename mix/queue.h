@@ -1,3 +1,7 @@
+// Copyright 2024 Gavin Gao. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
 /**
  * @file queue.h
  * @author Gavin Gao (cggos@outlook.com)
@@ -9,8 +13,8 @@
  *
  */
 
-#ifndef CGADS_QUEUE_H_
-#define CGADS_QUEUE_H_
+#ifndef DSA_QUEUE_H_
+#define DSA_QUEUE_H_
 
 #include <iostream>
 #include <stack>
@@ -26,4 +30,4 @@ class CQueue {
   std::stack<T> stack2;
 };
 
-#endif  // CGADS_QUEUE_H_
+#endif  // DSA_QUEUE_H_

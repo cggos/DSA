@@ -1,5 +1,9 @@
-#ifndef CGADS_LINEAR_LIST_H_
-#define CGADS_LINEAR_LIST_H_
+// Copyright 2024 Gavin Gao. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+#ifndef DSA_LINEAR_LIST_H_
+#define DSA_LINEAR_LIST_H_
 
 #include <cstddef>
 #include <iostream>
@@ -78,4 +82,4 @@ int LinearList<T>::remove(int index) {
   s = nullptr;
 }
 
-#endif  // CGADS_LINEAR_LIST_H_
+#endif  // DSA_LINEAR_LIST_H_

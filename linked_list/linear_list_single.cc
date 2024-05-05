@@ -1,5 +1,9 @@
-#ifndef CGADS_SINGLE_LIST_H_
-#define CGADS_SINGLE_LIST_H_
+// Copyright 2024 Gavin Gao. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+#ifndef DSA_SINGLE_LIST_H_
+#define DSA_SINGLE_LIST_H_
 
 #include "linked_list/linear_list_single.h"
 
@@ -162,4 +166,4 @@ LinkList SelectSort1(LinkList L) {
   return L;
 }
 
-#endif  // CGADS_SINGLE_LIST_H_
+#endif  // DSA_SINGLE_LIST_H_

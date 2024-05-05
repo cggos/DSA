@@ -1,5 +1,9 @@
-#ifndef CGADS_LINEAR_LIST_SINGLE__H_
-#define CGADS_LINEAR_LIST_SINGLE__H_
+// Copyright 2024 Gavin Gao. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+#ifndef DSA_LINEAR_LIST_SINGLE__H_
+#define DSA_LINEAR_LIST_SINGLE__H_
 
 #ifdef __cplusplus
 extern "C" {
@@ -39,4 +43,4 @@ LinkList SelectSort1(LinkList L);
 }
 #endif
 
-#endif  // CGADS_LINEAR_LIST_SINGLE__H_
+#endif  // DSA_LINEAR_LIST_SINGLE__H_

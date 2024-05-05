@@ -1,5 +1,9 @@
-#ifndef CGADS_ALGORITHM_H_
-#define CGADS_ALGORITHM_H_
+// Copyright 2024 Gavin Gao. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+#ifndef DSA_ALGORITHM_H_
+#define DSA_ALGORITHM_H_
 
 #ifdef __cplusplus
 extern "C" {
@@ -18,4 +22,4 @@ void test_precision();
 }
 #endif
 
-#endif  // CGADS_ALGORITHM_H_
+#endif  // DSA_ALGORITHM_H_

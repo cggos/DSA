@@ -1,3 +1,7 @@
+// Copyright 2024 Gavin Gao. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
 /**
  * @file linked_list_double.h
  * @author Gavin Gao (cggos@outlook.com)
@@ -8,8 +12,8 @@
  * @copyright Copyright (c) 2022
  *
  */
-#ifndef CGADS_LINKED_LIST_DOUBLE_H_
-#define CGADS_LINKED_LIST_DOUBLE_H_
+#ifndef DSA_LINKED_LIST_DOUBLE_H_
+#define DSA_LINKED_LIST_DOUBLE_H_
 
 namespace cg {
 
@@ -46,4 +50,4 @@ class DoubleLinkedList {
 
 };  // namespace cg
 
-#endif  // CGADS_LINKED_LIST_DOUBLE_H_
+#endif  // DSA_LINKED_LIST_DOUBLE_H_

@@ -1,5 +1,9 @@
-#ifndef CGADS_TREE_BINARY__H_
-#define CGADS_TREE_BINARY__H_
+// Copyright 2024 Gavin Gao. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+#ifndef DSA_TREE_BINARY__H_
+#define DSA_TREE_BINARY__H_
 
 #ifdef __cplusplus
 extern "C" {
@@ -22,4 +26,4 @@ void Posorder(BTREE &T);
 }
 #endif
 
-#endif  // CGADS_TREE_BINARY__H_
+#endif  // DSA_TREE_BINARY__H_
